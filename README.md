@@ -17,3 +17,5 @@ After downloding the repo, run:
 Run the development server:
 
     bundle exec jekyll serve
+
+Publish on the gh-pages branch.
