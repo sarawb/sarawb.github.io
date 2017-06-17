@@ -62,10 +62,6 @@ nav a:hover {
   display: none;
 }
 
-#landing-section img {
-  width: 100px;
-}
-
 #landing-section {
   background: url("/images/landing-image-med.png");
   background-size: 190%;
@@ -97,6 +93,7 @@ nav a:hover {
   color: #fff;
   letter-spacing: 0.03em;
   margin-bottom: 1em;
+  padding-right: 0.9em;
 }
 
 #landing-section p strong {
@@ -141,9 +138,30 @@ nav a:hover {
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
   #landing-section {
-    background-image: url("/images/landing-image-med.png");
-    height: 420px;
+    background-size: 110%;
   }
+
+  #landing-section-content {
+    padding: 0 0 0 2em;
+    height: 29em;
+  }
+
+  #landing-section h2 {
+    font-size: 1.8em;
+  }
+
+  #landing-section h2:first-child {
+    padding-top: 2em;
+  }
+
+  #landing-section p {
+    margin-bottom: 1em;
+  }
+
+  #work-with-us-btn {
+    margin: 0 0 0 0;
+  }
+
 }
 
 /* Larger than tablet */
@@ -151,11 +169,6 @@ nav a:hover {
   #main-container {
     padding: 0 0 0 0;
     width: 90%;
-  }
-
-  #landing-section {
-    background-image: url("/images/landing-image-med.png");
-    height: 700px;
   }
 
   #logo {
@@ -199,16 +212,72 @@ nav a:hover {
   nav li:first-child, nav li:nth-child(2), nav li:nth-child(3){
     padding-right: 2em;
   }
+
+  #landing-section {
+    background-image: url("/images/landing-image.png");
+    size: 100%;
+  }
+
+  #landing-section-content {
+    padding: 0 0 0 2em;
+    height: 26em;
+  }
+
+  #landing-section h2 {
+    font-size: 2.4em;
+  }
+
+  #landing-section h2:first-child {
+    padding-top: 3em;
+  }
+
+  #landing-section p {
+    margin-bottom: 2em;
+  }
+
+  #landing-description {
+    width: 80%;
+  }
+
+  #work-with-us-btn {
+    margin: 0 0 0 0;
+  }
+
 }
 
 /* Larger than desktop */
 @media (min-width: 1000px) {
-  #landing-section {
-    background-image: url("/images/landing-image.png");
-    height: 500px;
-  }
   nav li:first-child, nav li:nth-child(2), nav li:nth-child(3){
     padding-right: 4em;
+  }
+  #landing-section {
+    background-image: url("/images/landing-image.png");
+  }
+  #landing-section-content {
+    float: none;
+    margin: 0 auto;
+    width: 86%;
+  }
+
+  #landing-section-content {
+    padding: 0 0 0 2em;
+    height: 30em;
+  }
+
+  #landing-section h2 {
+    font-size: 3em;
+  }
+
+  #landing-section h2:first-child {
+    padding-top: 2em;
+  }
+
+  #landing-section p {
+    margin-bottom: 2.5em;
+  }
+
+  #work-with-us-btn {
+    margin: 0 0 0 0;
   }
 
 }
