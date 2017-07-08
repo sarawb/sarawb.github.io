@@ -1,0 +1,42 @@
+
+<svg width="92px" height="75px" viewBox="0 0 92 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="52.5" cy="31.5" r="21.5"></circle>
+        <circle id="path-2" cx="21.5" cy="21.5" r="21.5"></circle>
+        <circle id="path-4" cx="21.5" cy="21.5" r="21.5"></circle>
+        <filter x="-11.6%" y="-11.6%" width="123.3%" height="123.3%" filterUnits="objectBoundingBox" id="filter-5">
+            <feMorphology radius="10" operator="erode" in="SourceAlpha" result="shadowSpreadInner1"></feMorphology>
+            <feOffset dx="0" dy="0" in="shadowSpreadInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.988235294   0 0 0 0 0.984313725   0 0 0 0 0.988235294  0 0 0 1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Rare-Union-Home-v6-Mobile" transform="translate(-220.000000, -1084.000000)">
+            <g id="ICO:-Analysis" transform="translate(220.000000, 1084.000000)">
+                <rect id="Rectangle-9" stroke="#22B573" stroke-width="4.8" x="2.4" y="2.4" width="55.7423729" height="70.2" rx="4"></rect>
+                <path d="M11.9491525,10.3723404 L48.5932203,10.3723404 L48.5932203,15.1595745 L11.9491525,15.1595745 L11.9491525,10.3723404 Z M11.9491525,39.893617 L48.5932203,39.893617 L48.5932203,44.6808511 L11.9491525,44.6808511 L11.9491525,39.893617 Z M11.9491525,19.9468085 L48.5932203,19.9468085 L48.5932203,24.7340426 L11.9491525,24.7340426 L11.9491525,19.9468085 Z M11.9491525,49.4680851 L48.5932203,49.4680851 L48.5932203,54.2553191 L11.9491525,54.2553191 L11.9491525,49.4680851 Z M11.9491525,29.5212766 L48.5932203,29.5212766 L48.5932203,34.3085106 L11.9491525,34.3085106 L11.9491525,29.5212766 Z M11.9491525,59.0425532 L48.5932203,59.0425532 L48.5932203,63.8297872 L11.9491525,63.8297872 L11.9491525,59.0425532 Z" id="Combined-Shape" fill="#00A99D"></path>
+                <rect id="Rectangle-11" fill="#22B573" transform="translate(75.678366, 55.478124) rotate(44.000000) translate(-75.678366, -55.478124) " x="54.5350331" y="51.8876984" width="42.2866652" height="7.18085106" rx="3.59042553"></rect>
+                <g id="Oval">
+                    <use fill="#FCFBFC" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <circle stroke="#515151" stroke-width="4.8" cx="52.5" cy="31.5" r="19.1"></circle>
+                </g>
+                <g id="Combined-Shape" transform="translate(31.067797, 10.372340)">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <g id="Mask"></g>
+                    <polygon fill="#00A99D" mask="url(#mask-3)" points="3.18644068 16.7553191 46.2033898 16.7553191 46.2033898 26.3297872 3.18644068 26.3297872"></polygon>
+                    <polygon id="Combined-Shape-Copy-3" fill="#00A99D" mask="url(#mask-3)" points="0 5 47 5 47 12 0 12"></polygon>
+                    <polygon id="Combined-Shape-Copy-4" fill="#00A99D" mask="url(#mask-3)" points="0 31 47 31 47 38 0 38"></polygon>
+                    <g id="Oval" mask="url(#mask-3)">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                        <circle stroke="#22B573" stroke-width="4.8" cx="21.5" cy="21.5" r="19.1"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
