@@ -5,6 +5,25 @@
   line-height: 1.5;
   letter-spacing: 0.03em;
 }
+$bold: "ProximaNova-Bold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+.bold {
+  font-family: $bold;
+}
+// Colors
+$dark-grey: #515151;
+$white: #ffffff;
+$persian-green: #00A99D;
+
+.drk-grey {
+  color: $dark-grey;
+}
+.white {
+  color: $white;
+}
+.pn-green {
+  color: $persian-green;
+}
 
 body {
   margin: 0;
@@ -43,12 +62,10 @@ nav a {
   padding: 0 0 0 0;
   text-decoration: none;
   font-size: 1em;
-  font-family: "ProximaNova-Bold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #515151;
 }
 
 nav a:hover {
-  color: #00A99D;
+  color: $persian-green;
 }
 
 #logo {
@@ -61,6 +78,8 @@ nav a:hover {
 #work-with-us-nav-btn {
   display: none;
 }
+
+// Landing section ###############################
 
 #landing-section {
   background: url("/images/landing-image-med.png");
@@ -78,10 +97,8 @@ nav a:hover {
 }
 
 #landing-section h2 {
-  color: #fff;
   margin: 0;
   font-size: 2.1em;
-  font-family: "ProximaNova-Bold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   letter-spacing: 0.03em;
 }
 
@@ -90,14 +107,12 @@ nav a:hover {
 }
 
 #landing-section p {
-  color: #fff;
   letter-spacing: 0.03em;
   margin-bottom: 1em;
   padding-right: 0.9em;
 }
 
 #landing-section p strong {
-  font-family: "ProximaNova-bold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   letter-spacing: 0.04em;
   border-bottom: 2px solid #DB5757;
   padding-bottom: 0.15em;
@@ -112,20 +127,51 @@ nav a:hover {
   width: 90%;
 }
 
-#work-with-us-btn {
+.orange-button {
   display: block;
   -webkit-border-radius: 28;
   -moz-border-radius: 28;
   border-radius: 28px;
-  color: #ffffff;
   background: #DB5757;
   padding: 0.7em 1.4em 0.7em 1.4em;
   text-decoration: none;
   margin: 0 auto;
   width: 15em;
   text-align: center;
+  color: $white;
+  z-index: 999999;
 }
 
+.orange-button:hover {
+  background: #e87b6f;
+  color: $white;
+  text-decoration: none;
+}
+
+// Consulting and Research ########################
+#consulting-and-research-header h2 {
+  margin: 0.7em 0 0.2em 0;
+}
+
+.consulting-areas {
+  width: 47%;
+  min-height: 290px;
+}
+
+.consulting-areas p {
+  margin-bottom: 0;
+}
+
+.consulting-areas h4 {
+  font-size: 1em;
+}
+
+.consulting-areas:first-child, .consulting-areas:nth-child(3) {
+  float: left;
+}
+.consulting-areas:nth-child(2), .consulting-areas:nth-child(4) {
+  float: right;
+}
 
 /* Larger than mobile */
 
@@ -139,11 +185,7 @@ nav a:hover {
 @media (min-width: 550px) {
   #landing-section {
     background-size: 110%;
-  }
-
-  #landing-section-content {
-    padding: 0 0 0 2em;
-    height: 29em;
+    height: 100%;
   }
 
   #landing-section h2 {
@@ -158,10 +200,33 @@ nav a:hover {
     margin-bottom: 1em;
   }
 
-  #work-with-us-btn {
-    margin: 0 0 0 0;
+  #landing-description {
+    bottom: 1em;
   }
 
+  #landing-section-content {
+    height: 25em;
+  }
+
+  .consulting-areas{
+    all: unset;
+  }
+
+  .consulting-areas p{
+    padding-right: 1em;
+  }
+
+  #plan-your-project-wrapper {
+    margin-top: 0.8em;
+  }
+
+  .consulting-areas-wrapper {
+    display: block;
+  }
+
+  .consulting-areas:nth-child(2), .consulting-areas:nth-child(4) {
+    float: left;
+  }
 }
 
 /* Larger than tablet */
@@ -197,7 +262,6 @@ nav a:hover {
     -webkit-border-radius: 28;
     -moz-border-radius: 28;
     border-radius: 28px;
-    color: #ffffff;
     background: #DB5757;
     padding: 0.5em 1.4em 0.5em 1.4em;
     margin-top: -0.5em;
@@ -206,6 +270,7 @@ nav a:hover {
 
   #work-with-us-nav-btn:hover {
     background: #e87b6f;
+    color: $white;
     text-decoration: none;
   }
 
@@ -215,7 +280,7 @@ nav a:hover {
 
   #landing-section {
     background-image: url("/images/landing-image.png");
-    size: 100%;
+    height: 31em;
   }
 
   #landing-section-content {
@@ -243,20 +308,31 @@ nav a:hover {
     margin: 0 0 0 0;
   }
 
+  .consulting-areas p {
+    margin-bottom: 2.5em;
+  }
+
+}
+
+@media (min-width: 850px) {
+  #landing-section {
+    margin-bottom: 0em;
+  }
+
 }
 
 /* Larger than desktop */
 @media (min-width: 1000px) {
+  .site-content {
+    float: none;
+    margin: 0 auto;
+    width: 86%;
+  }
   nav li:first-child, nav li:nth-child(2), nav li:nth-child(3){
     padding-right: 4em;
   }
   #landing-section {
     background-image: url("/images/landing-image.png");
-  }
-  #landing-section-content {
-    float: none;
-    margin: 0 auto;
-    width: 86%;
   }
 
   #landing-section-content {
@@ -288,12 +364,18 @@ nav a:hover {
     background-image: url("/images/landing-image.png");
     height: 580px;
   }
+  #landing-section-content {
+    height: 39em;
+  }
 }
 
 @media (min-width: 1400px) {
    #landing-section {
     background-image: url("/images/landing-image.png");
     height: 700px;
+  }
+  #landing-section-content {
+    height: 45em;
   }
 }
 
