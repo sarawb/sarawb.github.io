@@ -127,23 +127,36 @@ nav a:hover {
   width: 90%;
 }
 
-.orange-button {
+.btn {
   display: block;
   -webkit-border-radius: 28;
   -moz-border-radius: 28;
   border-radius: 28px;
-  background: #DB5757;
   padding: 0.7em 1.4em 0.7em 1.4em;
   text-decoration: none;
   margin: 0 auto;
   width: 15em;
   text-align: center;
-  color: $white;
-  z-index: 999999;
 }
 
-.orange-button:hover {
+.btn-orange {
+  background: #DB5757;
+  color: $white;
+}
+
+.btn-orange:hover {
   background: #e87b6f;
+  color: $white;
+  text-decoration: none;
+}
+
+.btn-grey {
+  background: #515151;
+  color: $white;
+}
+
+.btn-grey:hover {
+  background: #706f6e;
   color: $white;
   text-decoration: none;
 }
