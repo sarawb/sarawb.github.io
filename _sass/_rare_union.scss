@@ -240,11 +240,14 @@ nav a:hover {
   margin: 0 0 1em 0;
 }
 
-#about img {
-  margin: 0 0 1em 0;
+#about p {
+  margin: 0 0 1.2em 0;
 }
 
-
+#about img {
+  margin: 0 0 1em 0;
+  content: url('/images/SWB_sm.png');
+}
 
 /* Larger than mobile */
 
@@ -437,6 +440,11 @@ nav a:hover {
     width: 100%;
   }
 
+  #about img {
+    content: url('/images/SWB.png');
+    width: 90%;
+  }
+
 }
 
 @media (min-width: 850px) {
@@ -451,6 +459,12 @@ nav a:hover {
 
   .consulting-areas-wrapper > .consulting-areas.six.columns {
     width: 50%;
+  }
+
+  #about {
+    float: none;
+    margin: 0 auto;
+    width: 82%;
   }
 
 }
@@ -490,6 +504,10 @@ nav a:hover {
     margin: 0 0 0 0;
   }
 
+  #about {
+    width: 70%;
+  }
+
 }
 
 /* Larger than Desktop HD */
@@ -500,6 +518,10 @@ nav a:hover {
   }
   #landing-section-content {
     height: 39em;
+  }
+
+  #about p {
+    line-height: 2;
   }
 }
 
