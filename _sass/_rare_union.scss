@@ -139,6 +139,18 @@ nav a:hover {
   text-align: center;
 }
 
+.sm-btn {
+  display: block;
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  padding: 0.7em 1.4em 0.7em 1.4em;
+  text-decoration: none;
+  margin: 0 auto;
+  width: 6em;
+  text-align: center;
+}
+
 .btn-orange {
   background: #DB5757;
   color: $white;
@@ -249,6 +261,50 @@ nav a:hover {
   content: url('/images/SWB_sm.png');
 }
 
+
+// Books ########################################
+
+#books {
+  background-image: url("/images/diamonds-sm.png");
+  padding: 0.9em;
+}
+
+#books h3 {
+  margin: 0 0 0.3em  0;
+}
+
+#books h5 {
+  margin-bottom: 0;
+}
+
+.dfrl-book-wrapper img {
+  content: url('/images/design-for-real-life-sm.png');
+  width: 85%;
+}
+
+.books-wrapper {
+  margin-top: 2em;
+}
+
+.dfrl-wrapper {
+  margin-bottom: 2em;
+}
+
+.ce-book-wrapper img {
+  content: url('/images/content-everywhere-sm.png');
+  width: 85%;
+}
+
+.dfrl-book-wrapper, .ce-book-wrapper {
+  width: 45%;
+  float: left;
+}
+.dfrl-descripion-wrapper, .ce-content-wrapper {
+  width: 55%;
+  float: left;
+}
+
+
 /* Larger than mobile */
 
 @media (min-width: 400px) {
@@ -309,6 +365,16 @@ nav a:hover {
 
   .client-logos {
     width: 29%;
+  }
+
+  .dfrl-book-wrapper img {
+    content: url('/images/design-for-real-life.png');
+    width: 85%;
+  }
+
+  .ce-book-wrapper img {
+    content: url('/images/content-everywhere.png');
+    width: 85%;
   }
 
 }
@@ -449,6 +515,24 @@ nav a:hover {
     width: 90%;
   }
 
+  .dfrl-descripion-wrapper, .ce-content-wrapper{
+    height: 210px;
+    position: relative;
+  }
+
+  .dfrl-descripion-wrapper p, .ce-content-wrapper p {
+    margin-bottom: 0;
+  }
+
+  .dfrl-descripion-wrapper .sm-btn, .ce-content-wrapper .sm-btn {
+    position: absolute;
+    bottom: 0;
+  }
+
+  #books-content-wrapper {
+  }
+
+
 }
 
 @media (min-width: 850px) {
@@ -471,6 +555,16 @@ nav a:hover {
     width: 82%;
   }
 
+  #about img {
+    width: 100%;
+  }
+
+  #books-content-wrapper {
+    padding-top: 2em;
+  }
+  .books-wrapper p {
+    line-height: 2;
+  }
 }
 
 /* Larger than desktop */
@@ -506,6 +600,15 @@ nav a:hover {
 
   #work-with-us-btn {
     margin: 0 0 0 0;
+  }
+
+  #books {
+    width: 70%;
+  }
+
+  .dfrl-descripion-wrapper, .ce-content-wrapper{
+    height: 240px;
+    position: relative;
   }
 
   #about {
