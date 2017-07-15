@@ -9,33 +9,26 @@ $(function() {
     };
   };
 
-  function changeClients() {
+  function change750() {
     var width = $(window).width();
     if(width >= 750) {
       $(".client-logos").addClass("one");
-    } else {
-      $(".client-logos").removeClass("one");
-    };
-  }
-
-  function changeAbout() {
-    var width = $(window).width();
-    if(width >= 750) {
       $("#swb-img-wrapper").addClass("four columns");
       $("#about-content-wrapper").addClass("eight columns");
+      $(".book-area").removeClass("twelve").addClass("six");
     } else {
+      $(".client-logos").removeClass("one");
       $("#swb-img-wrapper").removeClass("four columns");
       $("#about-content-wrapper").removeClass("eight columns");
+      $(".book-area").removeClass("six").addClass("twelve");
     };
   };
 
   changeConsultingArea();
-  changeClients();
-  changeAbout();
+  change750();
   $( window ).resize(function() {
     changeConsultingArea();
-    changeClients();
-    changeAbout();
+    change750();
   });
 
 });
