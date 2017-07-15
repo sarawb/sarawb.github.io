@@ -9,9 +9,20 @@ $(function() {
     };
   };
 
+  function changeClients() {
+    var width = $(window).width();
+    if(width >= 750) {
+      $(".client-logos").addClass("one");
+    } else {
+      $(".client-logos").removeClass("one");
+    };
+  }
+
   changeConsultingArea();
+  changeClients();
   $( window ).resize(function() {
-    changeConsultingArea();;
+    changeConsultingArea();
+    changeClients();
   });
 
 });

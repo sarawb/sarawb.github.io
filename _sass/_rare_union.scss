@@ -204,9 +204,30 @@ nav a:hover {
   padding: 0.9em;
 }
 
-
 #workshops-and-training h3 {
   margin: 0.3em 0 0.5em 0;
+}
+
+// Workshops and Training ########################
+
+#clients {
+  padding: 1em 0 0.2em 0;
+}
+
+.client-logos {
+  width: 33%;
+  height: 95px;
+  position: relative;
+  margin-bottom: 5%;
+}
+
+.client-logos img {
+  width: 62%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 /* Larger than mobile */
@@ -214,6 +235,9 @@ nav a:hover {
 @media (min-width: 400px) {
   nav a {
     font-size: 1.2em;
+  }
+  .client-logos {
+    margin-bottom: 10%;
   }
 }
 
@@ -263,6 +287,11 @@ nav a:hover {
   .consulting-areas:nth-child(2), .consulting-areas:nth-child(4) {
     float: left;
   }
+
+  .client-logos {
+    width: 29%;
+  }
+
 }
 
 /* Larger than tablet */
@@ -372,6 +401,24 @@ nav a:hover {
 
   #workshop-description p {
     padding: 0 1.5em 1em 0;
+  }
+
+  #clients {
+    padding: 0 0 0 0;
+  }
+
+  #clients h2 {
+    margin-bottom: 0;
+  }
+
+  .client-logos.one.columns {
+    width: 7.5%;
+    height: 100px;
+    margin-bottom: 5%;
+  }
+
+  .client-logos img {
+    width: 100%;
   }
 
 }
