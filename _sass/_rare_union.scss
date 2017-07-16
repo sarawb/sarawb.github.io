@@ -12,6 +12,7 @@ $bold: "ProximaNova-Bold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, 
 }
 // Colors
 $dark-grey: #515151;
+$light-grey: #9B9B9B;
 $white: #ffffff;
 $persian-green: #00A99D;
 
@@ -23,6 +24,10 @@ $persian-green: #00A99D;
 }
 .pn-green {
   color: $persian-green;
+}
+
+.lt-grey {
+  color: $light-grey;
 }
 
 body {
@@ -137,6 +142,12 @@ nav a:hover {
   margin: 0 auto;
   width: 15em;
   text-align: center;
+}
+
+form .btn {
+  padding-bottom: 4em;
+  width: 26em;
+  border: none;
 }
 
 .sm-btn {
@@ -304,6 +315,30 @@ nav a:hover {
   float: left;
 }
 
+// Contact ########################################
+
+#contact-form {
+  margin-top: 1em;
+}
+
+#contact-form h2 {
+  margin-bottom: 0.3em;
+  margin-top: 0.5em;
+}
+
+.project-info textarea {
+  height: 12em;
+}
+
+.contact-phone p {
+  text-align: center;
+  margin-top: 1em;
+}
+
+#contact-form textarea {
+  font-size: 1em;
+  padding: 1em;
+}
 
 /* Larger than mobile */
 
@@ -529,9 +564,21 @@ nav a:hover {
     bottom: 0;
   }
 
-  #books-content-wrapper {
+  #contact-form h2 {
+    text-align: center;
   }
 
+  #contact-form .btn {
+    margin: 0 0 0 0;
+    float: left;
+  }
+  .submit-button-wrapper {
+    width: 30%;
+  }
+  .contact-phone {
+    width: 20%;
+    float: left;
+  }
 
 }
 
@@ -602,17 +649,21 @@ nav a:hover {
     margin: 0 0 0 0;
   }
 
-  #books {
-    width: 70%;
-  }
-
   .dfrl-descripion-wrapper, .ce-content-wrapper{
     height: 240px;
     position: relative;
   }
 
-  #about {
+  #about, #books, #contact-form {
     width: 70%;
+  }
+
+  #contact-form {
+    margin: 0 auto;
+  }
+
+  #contact-form form {
+    width: 100%;
   }
 
 }
