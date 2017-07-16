@@ -340,6 +340,21 @@ form .btn {
   padding: 1em;
 }
 
+// Footer ########################################
+
+#footer {
+  background-image: url('/images/grey-diamonds-sm.png');
+  padding: 3em 1em 3em 1em;
+}
+
+#footer a {
+  color: $white;
+}
+
+#footer a:hover {
+  color: $persian-green;
+}
+
 /* Larger than mobile */
 
 @media (min-width: 400px) {
@@ -550,6 +565,10 @@ form .btn {
     width: 90%;
   }
 
+  #books {
+    background-image: url("/images/diamonds.png");
+  }
+
   .dfrl-descripion-wrapper, .ce-content-wrapper{
     height: 210px;
     position: relative;
@@ -578,6 +597,9 @@ form .btn {
   .contact-phone {
     width: 20%;
     float: left;
+  }
+  #footer {
+    background-image: url('/images/grey-diamonds.png');
   }
 
 }
@@ -664,6 +686,11 @@ form .btn {
 
   #contact-form form {
     width: 100%;
+  }
+
+  .footer-content {
+    width: 82%;
+    margin: 0 auto;
   }
 
 }
