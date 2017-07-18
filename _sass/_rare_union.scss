@@ -728,6 +728,15 @@ form .btn {
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {
   // Landing section #################################
+
+  #headline h2 {
+    font-size: 5em;
+  }
+
+  #landing-section h2:first-child {
+    padding-top: 0.9em;
+  }
+
    #landing-section {
     background-image: url("/images/landing-image.png");
     height: 580px;
@@ -752,6 +761,14 @@ form .btn {
   }
   #landing-section-content {
     height: 45em;
+  }
+
+  #headline h2 {
+    font-size: 5.5em;
+  }
+
+  #landing-section h2:first-child {
+    padding-top: 0.9em;
   }
 }
 
