@@ -18,3 +18,9 @@ exclude:
   - README.md
 sass:
   style: compressed
+
+assets:
+  sources:
+    - _assets/webfonts
+    - _assets/javascripts
+    - _assets/stylesheets
