@@ -224,9 +224,10 @@ form .btn {
   background-repeat: no-repeat;
 }
 
-#workshop-description {
+#workshops-and-training {
   background-image: url("../images/diamonds-sm.png");
   padding: 0.9em;
+  margin-top: 0.9em;
 }
 
 #workshops-and-training h3 {
@@ -540,11 +541,15 @@ form .btn {
     background-position: right top;
   }
 
+  #workshops-and-training{
+    background-image: url("../images/diamonds.png");
+    padding: 0;
+  }
+
   #workshop-description {
     width: 66%;
     height: 288px;
     margin: 0;
-    background-image: url("../images/diamonds.png");
     padding: 0.9em;
   }
 
@@ -705,7 +710,16 @@ form .btn {
     position: relative;
   }
 
-  #about, #books, #contact-form {
+  #workshops-and-training, #books {
+    width: 100%;
+  }
+
+  .workshop-wrapper {
+    width: 88%;
+    margin: 0 auto;
+  }
+
+  #about, #contact-form {
     width: 70%;
   }
 
