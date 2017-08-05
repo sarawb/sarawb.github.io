@@ -245,7 +245,6 @@ form .btn {
   width: 33%;
   height: 95px;
   position: relative;
-  margin-bottom: 5%;
 }
 
 .client-logos img {
@@ -366,10 +365,6 @@ form .btn {
   nav a {
     font-size: 1.2em;
   }
-  // Clients ###############################
-  .client-logos {
-    margin-bottom: 10%;
-  }
 }
 
 /* Larger than phablet (also point when grid becomes active) */
@@ -428,8 +423,8 @@ form .btn {
 
   // Clients ###############################
 
-  .client-logos {
-    width: 29%;
+  .client-logos img {
+    width: 90%;
   }
 
   .dfrl-book-wrapper img {
@@ -665,6 +660,10 @@ form .btn {
   .books-wrapper p {
     line-height: 2;
   }
+
+  .client-logos img {
+    width: 80%;
+  }
 }
 
 /* Larger than desktop */
@@ -770,6 +769,10 @@ form .btn {
   #about p {
     line-height: 2;
   }
+
+  .client-logos img {
+    width: 70%;
+  }
 }
 
 @media (min-width: 1400px) {
@@ -791,6 +794,10 @@ form .btn {
   }
   #landing-description p {
     font-size: 1.5em;
+  }
+
+  .client-logos img {
+    width: 60%;
   }
 }
 

@@ -12,7 +12,7 @@ $(function() {
   function change750() {
     var width = $(window).width();
     if(width >= 750) {
-      $(".client-logos").addClass("one");
+      $(".client-logos").removeClass("one").addClass("two");
       $("#swb-img-wrapper").addClass("four columns");
       $("#about-content-wrapper").addClass("eight columns");
       $(".book-area").removeClass("twelve").addClass("six");
