@@ -198,10 +198,7 @@ form .btn {
 
 .consulting-areas p {
   margin-bottom: 0;
-}
-
-.consulting-areas h4 {
-  font-size: 1em;
+  margin-right: 1em;
 }
 
 .consulting-areas:first-child, .consulting-areas:nth-child(3) {
@@ -209,6 +206,10 @@ form .btn {
 }
 .consulting-areas:nth-child(2), .consulting-areas:nth-child(4) {
   float: right;
+}
+
+.consulting-area-logo-div {
+  height: 75px;
 }
 
 // Workshops and Training ########################
@@ -403,6 +404,10 @@ form .btn {
 
   .consulting-areas {
     all: unset;
+  }
+
+  .consulting-areas {
+    padding-top: 1.5em;
   }
 
   .consulting-areas p{
@@ -783,6 +788,9 @@ form .btn {
 
   #landing-section h2:first-child {
     padding-top: 0.9em;
+  }
+  #landing-description p {
+    font-size: 1.5em;
   }
 }
 
