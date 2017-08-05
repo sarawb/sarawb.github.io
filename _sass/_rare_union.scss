@@ -654,9 +654,10 @@ form .btn {
     width: 100%;
   }
 
-  #books-content-wrapper {
+  .books-content-wrapper {
     padding-top: 2em;
   }
+
   .books-wrapper p {
     line-height: 2;
   }
@@ -718,7 +719,7 @@ form .btn {
     width: 100%;
   }
 
-  .workshop-wrapper {
+  .workshop-wrapper, .books-content-wrapper {
     width: 88%;
     margin: 0 auto;
   }
