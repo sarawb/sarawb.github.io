@@ -214,10 +214,6 @@ form .btn {
 
 // Workshops and Training ########################
 
-#workshops-and-training {
-  padding: 2.5em 0 0.2em 0;
-}
-
 #workshop-image-wrapper {
   background-image: url("../images/workshop-image-sm.png");
   background-size: 100%;
@@ -228,7 +224,7 @@ form .btn {
 #workshops-and-training {
   background-image: url("../images/diamonds-sm.png");
   padding: 0.9em;
-  margin-top: 0.9em;
+  margin-top: 3em;
 }
 
 #workshops-and-training h3 {
@@ -239,6 +235,7 @@ form .btn {
 
 #clients {
   padding: 1em 0 0.2em 0;
+  margin-top: 2em;
 }
 
 .client-logos {
@@ -257,6 +254,10 @@ form .btn {
 }
 
 // About ########################################
+
+#about {
+  padding-top: 3em;
+}
 
 #about h2{
   margin: 0.5em 0 0.2em 0;
@@ -281,6 +282,7 @@ form .btn {
 #books {
   background-image: url("../images/diamonds-sm.png");
   padding: 0.9em;
+  margin-top: 3em;
 }
 
 #books h3 {
@@ -321,7 +323,7 @@ form .btn {
 // Contact ########################################
 
 #contact-form {
-  margin-top: 1em;
+  margin-top: 3em;
 }
 
 #contact-form h2 {
@@ -519,6 +521,10 @@ form .btn {
     width: 80%;
   }
 
+  #consulting-and-research-header {
+     width: 90%;
+  }
+
   // Work with us ###############################
 
   #work-with-us-btn {
@@ -677,7 +683,7 @@ form .btn {
   .site-content {
     float: none;
     margin: 0 auto;
-    width: 86%;
+    width: 77%;
   }
 
   nav li:first-child, nav li:nth-child(2), nav li:nth-child(3){
@@ -723,16 +729,16 @@ form .btn {
     position: relative;
   }
 
-  #workshops-and-training, #books {
+  #workshops-and-training, #books, #footer {
     width: 100%;
   }
 
-  .workshop-wrapper, .books-content-wrapper {
-    width: 88%;
+  .workshop-wrapper, .books-content-wrapper, #about {
+    width: 78.8%;
     margin: 0 auto;
   }
 
-  #about, #contact-form {
+  #contact-form {
     width: 70%;
   }
 
