@@ -62,10 +62,14 @@ function validateEmail(){
 }
 
 function validateForm() {
-  if(validateName() && validateEmail()) {
-    return true
-  } else {
+  if($("#botName").val() != "") {
     return false
+  } else {
+    if(validateName() && validateEmail()) {
+      return true
+    } else {
+      return false
+    }
   }
 }
 
