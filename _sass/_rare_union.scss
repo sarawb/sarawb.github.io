@@ -344,6 +344,7 @@ form .btn {
 
 .project-info textarea {
   height: 12em;
+  font-size: 1em;
 }
 
 .contact-phone p {
@@ -362,6 +363,14 @@ form .btn {
 .form-warning {
   border: 1px solid $orange !important;
   outline: 0;
+}
+
+#form-error{
+  display: none;
+}
+
+.submit-button-wrapper {
+  margin-top: 1em;
 }
 
 // Thanks ########################################
