@@ -4,6 +4,8 @@
       Contact
     </h2>
     <form id="contact-us-form" action="https://formspree.io/sara@rareunion.com" method="POST">
+      <input type="text" name="_gotcha" style="display:none" />
+      <input id="botName" type="text" name="_bot-name" style="display:none">
       <div class="row">
         <input type="hidden" name="_subject" value="Rare Union Inquiry" />
         <div class="twelve columns">
@@ -28,6 +30,14 @@
           <label for="project-info" class="drk-grey">Tell us about your project</label>
           <textarea form="contact-form" class="u-full-width" type="textarea" id="projectInput"></textarea>
         </div>
+      </div>
+      <input type="hidden" name="_cc" value="william.ellet@gmail.com" />
+      <div id="form-error" class="twelve columns orange">
+        <h5>
+          Oops!
+          <br />
+          There was an error submitting this form.
+        </h5>
       </div>
       <div class="row">
         <div class="submit-button twelve columns">
