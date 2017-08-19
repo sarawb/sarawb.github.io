@@ -73,6 +73,54 @@ function validateForm() {
   }
 }
 
+var $contactForm = $('#contact-us-form');
+var formErrorMessage = $('#form-error');
+
+function showThanksSection(){
+  var thanksSection = $('#thanks');
+  thanksSection.show();
+     $('html, body').animate({
+    scrollTop: thanksSection.offset().top
+  }, 500, function() {
+    var $thanksSection = $(thanksSection);
+    $thanksSection.focus();
+    if ($thanksSection.is(":focus")) {
+      return false;
+    };
+  });
+}
+
+$contactForm.submit(function(e) {
+  var name = $('#nameInput').val();
+  var title = $('#titleInput').val();
+  var organization = $("#organizationInput").val();
+  var email = $('#emailInput').val();
+  var project = $('#projectInput').val();
+  formErrorMessage.hide();
+  e.preventDefault();
+  if(validateForm()) {
+    $.ajax({
+      url: '//formspree.io/sara@rareunion.com',
+      method: 'POST',
+      data: {
+        name: name,
+        title: title,
+        organization: organization,
+        email: email,
+        project: project,
+        _replyto: email
+      },
+      dataType: 'json',
+      success: function(data) {
+        showThanksSection();
+      },
+      error: function(err) {
+        formErrorMessage.hide();
+      }
+    });
+  };
+});
+
 $('a[href*="#"]')
   .not('[href="#"]')
   .not('[href="#0"]')
