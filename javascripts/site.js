@@ -33,33 +33,61 @@ $(function() {
 
 });
 
-// Select all links with hashes
+function validateName(){
+  validateEmail();
+  var nameInput = $("#nameInput");
+  if(nameInput.val() === ""){
+    $("#name-required-warning").show();
+    nameInput.addClass("form-warning");
+    return false
+  } else {
+    $("#name-required-warning").hide();
+    nameInput.removeClass("form-warning");
+    return true
+  }
+}
+
+function validateEmail(){
+  var emailInput = $("#emailInput");
+  var test = $("#emailInput[input]")
+  if(emailInput.val() === ""){
+    $("#email-required-warning").show();
+    emailInput.addClass("form-warning");
+    return false
+  } else {
+    $("#email-required-warning").hide();
+    emailInput.removeClass("form-warning");
+    return true
+  }
+}
+
+function validateForm() {
+  if(validateName() && validateEmail()) {
+    return true
+  } else {
+    return false
+  }
+}
+
 $('a[href*="#"]')
-  // Remove links that don't actually link to anything
   .not('[href="#"]')
   .not('[href="#0"]')
   .click(function(event) {
-    // On-page links
   if (
     location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
     &&
     location.hostname == this.hostname
   ) {
-    // Figure out element to scroll to
     var target = $(this.hash);
     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-    // Does a scroll target exist?
     if (target.length) {
-      // Only prevent default if animation is actually gonna happen
       event.preventDefault();
       $('html, body').animate({
         scrollTop: target.offset().top
       }, 500, function() {
-        // Callback after animation
-        // Must change focus!
         var $target = $(target);
         $target.focus();
-        if ($target.is(":focus")) { // Checking if the target was focused
+        if ($target.is(":focus")) {
           return false;
         };
       });
