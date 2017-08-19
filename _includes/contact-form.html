@@ -7,7 +7,8 @@
       <div class="row">
         <input type="hidden" name="_subject" value="Rare Union Inquiry" />
         <div class="twelve columns">
-          <label for="name" class="drk-grey">Name</label>
+          <label for="name" class="drk-grey" required>Name</label>
+          <span id="name-required-warning" class="orange bold">Name is required</span>
           <input class="u-full-width" type="text" id="nameInput">
         </div>
         <div class="twelve columns">
@@ -19,8 +20,9 @@
           <input class="u-full-width" type="text" id="organizationInput">
         </div>
         <div class="twelve columns">
-          <label for="email" class="drk-grey">Email</label>
-          <input class="u-full-width" type="email" id="emailInput">
+          <label for="email" class="drk-grey" required>Email</label>
+          <span id="email-required-warning" class="orange bold">Email is required</span>
+          <input class="u-full-width" type="email" id="emailInput" name="_replyto">
         </div>
         <div class="twelve columns project-info">
           <label for="project-info" class="drk-grey">Tell us about your project</label>
