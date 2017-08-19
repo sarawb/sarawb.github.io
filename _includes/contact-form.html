@@ -3,8 +3,9 @@
     <h2 class="drk-grey bold">
       Contact
     </h2>
-    <form action="">
+    <form id="contact-us-form" action="https://formspree.io/sara@rareunion.com" method="POST">
       <div class="row">
+        <input type="hidden" name="_subject" value="Rare Union Inquiry" />
         <div class="twelve columns">
           <label for="name" class="drk-grey">Name</label>
           <input class="u-full-width" type="text" id="nameInput">
@@ -29,7 +30,7 @@
       <div class="row">
         <div class="submit-button twelve columns">
           <div class="submit-button-wrapper">
-            <button class="btn btn-orange">Send</button>
+            <button type="submit" id="contact-submit" class="btn btn-orange">Send</button>
           </div>
         </div>
       </div>
