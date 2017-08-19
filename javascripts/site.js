@@ -96,7 +96,6 @@ $contactForm.submit(function(e) {
   var organization = $("#organizationInput").val();
   var email = $('#emailInput').val();
   var project = $('#projectInput').val();
-  formErrorMessage.hide();
   e.preventDefault();
   if(validateForm()) {
     $.ajax({
@@ -115,7 +114,7 @@ $contactForm.submit(function(e) {
         showThanksSection();
       },
       error: function(err) {
-        formErrorMessage.hide();
+        formErrorMessage.show();
       }
     });
   };
