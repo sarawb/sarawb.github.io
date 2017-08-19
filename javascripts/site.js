@@ -72,7 +72,7 @@ function validateForm() {
     }
   }
 }
-
+// test
 var $contactForm = $('#contact-us-form');
 var formErrorMessage = $('#form-error');
 
