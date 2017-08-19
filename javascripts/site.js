@@ -13,13 +13,13 @@ $(function() {
     var width = $(window).width();
     if(width >= 750) {
       $(".client-logos").removeClass("one").addClass("two");
-      $("#swb-img-wrapper").addClass("four columns");
-      $("#about-content-wrapper").addClass("eight columns");
+      $("#swb-img-wrapper").addClass("five columns");
+      $("#about-content-wrapper").addClass("seven columns");
       $(".book-area").removeClass("twelve").addClass("six");
     } else {
       $(".client-logos").removeClass("one");
-      $("#swb-img-wrapper").removeClass("four columns");
-      $("#about-content-wrapper").removeClass("eight columns");
+      $("#swb-img-wrapper").removeClass("five columns");
+      $("#about-content-wrapper").removeClass("seven columns");
       $(".book-area").removeClass("six").addClass("twelve");
     };
   };

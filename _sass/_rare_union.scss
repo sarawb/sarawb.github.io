@@ -541,7 +541,7 @@ form .btn {
     float: right;
     background-image: url("../images/workshop-image.png");
     background-size: cover;
-    min-height: 315px;
+    min-height: 350px;
     width: 33%;
     background-repeat: no-repeat;
     background-position: right top;
@@ -585,9 +585,17 @@ form .btn {
 
   // About #################################
 
-  #about img {
+  #swb-img-wrapper img {
     content: url('../images/SWB.png');
-    width: 90%;
+    height: 30px;
+  }
+
+  #swb-img-wrapper{
+    width: 50%;
+  }
+
+  #about-content-wrapper {
+    width: 45%;
   }
 
   // Books #################################
@@ -664,6 +672,10 @@ form .btn {
     width: 100%;
   }
 
+  #about-content-wrapper {
+    width: 45%;
+  }
+
   .books-content-wrapper {
     padding-top: 2em;
   }
@@ -720,6 +732,16 @@ form .btn {
 
   #work-with-us-btn {
     margin: 0 0 0 0;
+  }
+
+  // About #################################
+
+  #swb-img-wrapper{
+    width: 45%;
+  }
+
+  #about-content-wrapper{
+    width: 50%;
   }
 
   // Books #################################
@@ -785,6 +807,16 @@ form .btn {
     line-height: 2;
   }
 
+  #swb-img-wrapper{
+    width: 37%;
+  }
+
+  #about-content-wrapper{
+    width: 57%;
+  }
+
+  // Clients #################################
+
   .client-logos img {
     width: 70%;
   }
@@ -809,6 +841,15 @@ form .btn {
   }
   #landing-description p {
     font-size: 1.5em;
+  }
+
+  // About
+  #swb-img-wrapper{
+    width: 33%;
+  }
+
+  #about-content-wrapper{
+    width: 60%;
   }
 
   .client-logos img {
