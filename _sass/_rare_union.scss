@@ -364,11 +364,25 @@ form .btn {
   outline: 0;
 }
 
+// Thanks ########################################
+
+#thanks {
+  display: none;
+  background-image: url('../images/diamonds-sm.png');
+  height: 20em;
+  padding: 3em 1em 3em 1em;
+}
+
 // Footer ########################################
 
 #footer {
   background-image: url('../images/grey-diamonds-sm.png');
-  padding: 3em 1em 3em 1em;
+  height: 100%;
+  width: 100%;
+}
+
+.footer-content {
+  padding: 1em 0em 3em 1em;
 }
 
 #footer a {
@@ -377,6 +391,10 @@ form .btn {
 
 #footer a:hover {
   color: $persian-green;
+}
+
+#footer h5 {
+  padding-top: 1em;
 }
 
 /* Larger than mobile */
