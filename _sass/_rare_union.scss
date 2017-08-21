@@ -42,15 +42,26 @@ $orange: #DB5757;
 body {
   margin: 0;
   padding: 0;
+  background-color: #FFFFFF;
 }
 
 #main-container, #landing-section-content {
   padding: 0 0.9em 0 0.9em;
 }
 
+#main-container {
+	padding: 2em;
+	background-color: #fcfcfc;
+}
+
+header {
+  margin: 0 auto;
+  padding: 2em;
+}
 nav {
+  margin-bottom: 2em;
   width: 100%;
-  margin-top: 8px;
+  //margin-top: 8px;
 }
 
 nav ul {
@@ -75,7 +86,7 @@ nav a {
   height: 30px;
   padding: 0 0 0 0;
   text-decoration: none;
-  font-size: 1em;
+  font-size: 18px;
 }
 
 nav a:hover {
@@ -193,6 +204,10 @@ form .btn {
 
 // Consulting and Research ########################
 #consulting-and-research-header h2 {
+  margin: 0.7em 0 0.2em 0;
+}
+
+#consulting-and-research-header h5 {
   margin: 0.7em 0 0.2em 0;
 }
 
@@ -493,7 +508,7 @@ form .btn {
 
   #main-container {
     padding: 0 0 0 0;
-    width: 90%;
+    width: 100%;
   }
 
   #logo {
@@ -515,7 +530,7 @@ form .btn {
   }
 
   nav a {
-    font-size: 1em;
+    font-size: 18px;
   }
 
   nav li:first-child, nav li:nth-child(2), nav li:nth-child(3){
@@ -524,12 +539,13 @@ form .btn {
 
   #work-with-us-nav-btn {
     display: inline;
-    -webkit-border-radius: 28;
-    -moz-border-radius: 28;
-    border-radius: 28px;
+    -webkit-border-radius: 100;
+    -moz-border-radius: 100;
+    border-radius: 100px;
     background: #DB5757;
-    padding: 0.5em 1.4em 0.5em 1.4em;
-    margin-top: -0.5em;
+    font-weight: bold;
+    padding: 14px 28px;
+//  margin-top: -0.5em;
     text-decoration: none;
   }
 
