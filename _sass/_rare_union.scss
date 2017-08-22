@@ -158,6 +158,18 @@ nav {
 					}
 				}
 		}
+		#logo {
+			margin:0;
+		}
+		
+		@include n700 {
+			&.row {
+				display: block;
+				#logo {
+					margin-top: 1em;
+				}
+			}
+		}
 		@include w700 {
 			&.row {
 				align-content: center;
@@ -171,8 +183,12 @@ nav {
 			}
 			#logo {
 				height: 3em;
-				margin: 0 0 0 2em;
 				}
+		}
+		@include w1000 {
+			#logo {
+				margin-left: 2em;
+			}
 		}
 }
 
