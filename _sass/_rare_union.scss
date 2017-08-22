@@ -246,7 +246,9 @@ nav {
 // Consulting ########################################
 
 #consulting-and-research {
+	display: inline-flex;
 	margin-bottom: 4em;
+	
 	.row {
 		margin-bottom: 2em;
 	}
@@ -269,58 +271,43 @@ nav {
 
 #workshops-and-training {
 	margin: 0;
-	padding: 0 0 2em;
-		@include n700 {
-/*
-			.row {
-				flex-direction: column;
-			}
-*/
-			.large {
-				display: block;
-				margin: 12px 24px;
-			}
-			#plan-your-project-wrapper {
-				display: flex;
-			}
+	padding: 0;
+	@include n700 {
+		padding-bottom: 2em;
+		.row {
+			//flex-direction: row-reverse;
+			flex-direction: column;
 		}
-		@include n1000 {
-			.row {
-				flex-direction: column;
-			}
+		.large {
+			display: inline-block;
+			width: auto;
+			//margin: 12px 24px;
 		}
-		@include w1000 {
-			padding-bottom: 0;
-			.col {
-				flex: 0 0 calc(50% - 7%);
-				flex-wrap: wrap;
-				}
-				&:first-child {
-					display: inline-flex;
-				}
-			.row {
-				align-items: center;
-				flex-direction: row-reverse;
-				justify-content: flex-start;
-			}
-			.large {
-				display: inline-block;
-				width: auto;
-			}
-			#workshop-image-wrapper {
-				min-height: 615px;
-			}
+		#plan-your-project-wrapper {
+			//display: flex;
 		}
-		@include n1440 {
-			.col {
-				flex: 0 0 calc(50% - 12px);
-				}
-
+	}
+	@include w700 {
+		//padding-bottom: 0;
+		.col {
+			flex: 0 0 50%;
+			}
+		.row {
+			align-items: center;
+			flex-direction: row-reverse;
+		}
+		.large {
+			display: inline-block;
+			width: auto;
 		}
 		#workshop-image-wrapper {
-			display: block;
-			height: 376px;
+			min-height: 615px;
 		}
+	}
+	#workshop-image-wrapper {
+		display: block;
+		height: 376px;
+	}
 }
 
 #workshop-image-wrapper {
