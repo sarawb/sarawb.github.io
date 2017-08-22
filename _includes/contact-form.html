@@ -1,6 +1,6 @@
-<div id="contact-form" class="site-content">
-  <div class="row">
-    <h2 class="drk-grey bold">
+<div id="contact-form">
+  <div>
+    <h2>
       Contact
     </h2>
     <form id="contact-us-form" action="https://formspree.io/sara@rareunion.com" method="POST">
@@ -8,30 +8,30 @@
       <input id="botName" type="text" name="_bot-name" style="display:none">
       <div class="row">
         <input type="hidden" name="_subject" value="Rare Union Inquiry" />
-        <div class="twelve columns">
-          <label for="name" class="drk-grey" required>Name</label>
-          <span id="name-required-warning" class="orange bold">Name is required</span>
+        <div>
+          <label for="name" required>Name</label>
+          <span id="name-required-warning" class="warning">Name is required</span>
           <input class="u-full-width" type="text" id="nameInput">
         </div>
-        <div class="twelve columns">
-          <label for="title" class="drk-grey">Title <span class="lt-grey">Optional</span></label>
+        <div>
+          <label for="title">Title <span>Optional</span></label>
           <input class="u-full-width" type="text" id="titleInput">
         </div>
-        <div class="twelve columns">
-          <label for="organization" class="drk-grey">Organization <span class="lt-grey">Optional</span></label>
+        <div>
+          <label for="organization">Organization <span>Optional</span></label>
           <input class="u-full-width" type="text" id="organizationInput">
         </div>
-        <div class="twelve columns">
-          <label for="email" class="drk-grey" required>Email</label>
-          <span id="email-required-warning" class="orange bold">Email is required</span>
+        <div>
+          <label for="email" required>Email</label>
+          <span id="email-required-warning" class="warning">Email is required</span>
           <input class="u-full-width" type="email" id="emailInput" name="_replyto">
         </div>
-        <div class="twelve columns project-info">
-          <label for="project-info" class="drk-grey">Tell us about your project</label>
+        <div class="project-info">
+          <label for="project-info">Tell us about your project</label>
           <textarea form="contact-form" class="u-full-width" type="textarea" id="projectInput"></textarea>
         </div>
       </div>
-      <div id="form-error" class="twelve columns orange">
+      <div id="form-error">
         <h5>
           Oops!
           <br />
@@ -39,10 +39,10 @@
         </h5>
       </div>
       <div class="row">
-        <div class="submit-button twelve columns">
+        <div class="submit-button">
         <div class="g-recaptcha" data-sitekey="6LcbYS0UAAAAAGto-Cc8Ydt2dVW1NodxIhkWX1R0"></div>
           <div class="submit-button-wrapper">
-            <button type="submit" id="contact-submit" class="btn btn-orange">Send</button>
+            <button type="submit" id="contact-submit" class="btn large">Send</button>
           </div>
         </div>
       </div>

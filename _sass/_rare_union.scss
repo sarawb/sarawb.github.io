@@ -1,355 +1,463 @@
-// Fonts ###############################
-* {
-  font-family: "ProximaNova-Regular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
-}
-$bold: "ProximaNova-Bold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-.bold {
-  font-family: $bold;
-}
-
-// Colors ###############################
-$dark-grey: #515151;
-$light-grey: #9B9B9B;
-$white: #ffffff;
-$persian-green: #00A99D;
-$orange: #DB5757;
-
-.drk-grey {
-  color: $dark-grey;
-}
-
-.white {
-  color: $white;
-}
-
-.pn-green {
-  color: $persian-green;
-}
-
-.lt-grey {
-  color: $light-grey;
-}
-
-.orange {
-  color: $orange;
-}
-
-// Basic Styles ###############################
+// Layout ########################################
 
 body {
-  margin: 0;
-  padding: 0;
-  background-color: #FFFFFF;
-}
-
-#main-container, #landing-section-content {
-  padding: 0 0.9em 0 0.9em;
+	background-color: #ffffff;
+	color: $black;
+	font-size: 18px;
+	margin: .75em;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: auto;
 }
 
 #main-container {
-	padding: 2em;
 	background-color: #fcfcfc;
+	width: 100%;
 }
 
-header {
-  margin: 0 auto;
-  padding: 2em;
+
+// Buttons ########################################
+
+.btn, button {
+	background-color: $red;
+	border: 2px solid $red;
+	border-radius: 100px;
+	color: $white;
+	font-size: 1em;
+	font-weight: bold;
+	height: auto;
+	line-height: 1.3;
+	margin: 0;
+	padding: .5em 1em;
+	text-align: center;
+	text-decoration: none;
+	text-transform: none;
+	-webkit-appearance: none;
+	&:hover {
+		background-color: transparent;
+		border-color: $red;
+		color: $red;
+		transition: background-color 0.2s ease;
+	}
 }
+
+.large {
+	display: table-cell;
+	padding: 1em 6em;
+	width: 100%;
+	@include w700 {
+		display: block;
+		margin: 0 auto;
+		max-width: 350px;
+		}
+	@include n480 {
+		padding: 1em 3em;
+	}
+}
+.alt {
+	background-color: $black;
+	border-color: $black;
+}	
+
+// Type ########################################
+
+h2 {
+  font-family: $heading; 
+  font-size: 48px;
+  font-weight: 900;
+}
+
+h3 {
+	color: $teal;
+	font-size: 1.25em;
+	font-weight: 200;
+}
+
+h5 {
+	font-size: 1.25em;
+	margin-bottom: 1em;
+}
+
+// Shared Layout ########################################
+
+#consulting-and-research, #about, #clients, #books, #contact-form {
+	display: inline-block;
+	margin-bottom: 2em;
+	padding: 1em;
+		@include w700 {
+			padding: 10vh 15%;
+			}
+}
+
+
+#consulting-and-research, #books {
+	.col {
+	   flex: 0 0 calc(50% - 24px);   /* flex-basis adjustment for margin */
+	   margin: 1em 12px;
+	   @include w700 {
+		   flex: 0 0 calc(25% - 48px);
+		   margin: 2em 24px;
+	   }
+	}	
+}
+
+#workshops-and-training, #books, #footer {
+	background-color: $teal;
+	background-image: url(/images/diamonds.png);
+	background-position: left top;
+	background-repeat: repeat;
+	color: $white;
+	margin: 2em auto;
+	padding-bottom: 2em;
+	h2, h3, h4, h5, p, .btn {
+		color: $white;
+		font-weight: bold;
+		margin: 12px 24px;
+		text-align: left;
+	}
+	h2 {
+		margin-top: 24px;
+	}
+	h5 {
+		font-weight: normal;
+	}
+	p {
+		margin-bottom: 2em;
+	}
+	.btn {
+		&:hover{
+			border-color: $white;
+			color: $white;
+		}
+	}
+}
+
+.wrap {
+	display: table;
+	width: 100%;
+}
+
+// Nav ########################################
+
 nav {
-  margin-bottom: 2em;
-  width: 100%;
-  //margin-top: 8px;
-}
-
-nav ul {
-  list-style: none;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-nav li {
-  margin-bottom: 0;
-  float: left;
-}
-
-nav li:first-child, nav li:nth-child(2) {
-  padding-right: 1.6em;
-}
-
-nav a {
-  position: relative;
-  width: 100%;
-  height: 30px;
-  padding: 0 0 0 0;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-nav a:hover {
-  color: $persian-green;
+	margin: 1em 1em;
+	ul{
+		width: auto;
+	}
+		ul li {
+			display: inline;
+			margin-right: 2em;
+				a {
+					color: $black;
+					font-weight: bold;
+					text-decoration: none;
+				}
+				.btn {
+					display: none;
+					@include w700 {
+						display: inherit;
+					}
+				}
+		}
+		@include w700 {
+			&.row {
+				align-content: center;
+				flex-direction: row;
+				justify-content: space-between;
+				padding-top: 2em;
+				}
+			ul {
+				margin-top: 1em;
+				//display: inline-flex;
+			}
+			#logo {
+				height: 3em;
+				margin: 0 0 0 2em;
+				}
+		}
 }
 
 #logo {
-  width: 10em;
-  height: auto;
-  padding-left: 0;
-  padding-bottom: 0.3em;
+	height: 2em;
+	margin: 1em 0;
+	width: auto;
 }
 
-#work-with-us-nav-btn {
-  display: none;
-}
 
-// Landing section ###############################
+// Heroine ########################################
 
 #landing-section {
   background: url("../images/landing-image-med.png");
-  background-size: 190%;
-  height: 36em;
-  background-position: 40% 20%;
+  background-size: cover;
+  background-position: left 70%;
   background-repeat: no-repeat;
-  width: 100%;
+  margin-bottom: 2em;
+  padding: 2em 1em 4em;
+	  h2 {
+		  color: $white;
+		  margin-bottom: 4em;
+		  }
+	  p {
+		  color: $white;
+		  margin-bottom: 2em;
+	  }
+	  strong {
+		  border-bottom: 3px solid $red;
+	  }
+ 	.btn:hover {
+		  border-color: $white;
+		  color: $white;
+	  }
+		@include w700 {
+			padding: 20vh 15%;
+			h2 {
+				font-size: 4em;
+				margin-bottom: .5em;
+			}
+			p {
+				font-size: 1.5em;
+				max-width: 800px;
+			}
+			.wrap {
+				display: block;
+			}
+			.large {
+				margin: 0;
+			}
+	}
 }
 
-#landing-section-content {
-  position: relative;
-  height: 34em;
+
+// Consulting ########################################
+
+#consulting-and-research {
+	margin-bottom: 4em;
+	.row {
+		margin-bottom: 2em;
+	}
+	.col {
+	   padding-right: 1em;
+	   margin: 1em auto;
+	   width: 48%;
+	   div {
+			margin-bottom: 1em;
+		}
+		img {
+			height: 72px;
+			width: auto;
+		}
+	}
 }
 
-#landing-section h2 {
-  margin: 0;
-  font-size: 2.1em;
-  letter-spacing: 0.03em;
-}
 
-#landing-section h2:first-child {
-  padding-top: 0.6em;
-}
-
-#landing-section p {
-  margin-bottom: 1em;
-  padding-right: 0.9em;
-}
-
-#landing-section p strong {
-  letter-spacing: 0.04em;
-  border-bottom: 2px solid #DB5757;
-  padding-bottom: 0.15em;
-}
-
-#landing-description {
-  position: absolute;
-  bottom: 0;
-}
-
-#work-with-us-wrapper {
-  width: 90%;
-}
-
-.btn {
-  display: block;
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
-  border-radius: 28px;
-  padding: 0.7em 1.4em 0.7em 1.4em;
-  text-decoration: none;
-  margin: 0 auto;
-  width: 15em;
-  text-align: center;
-}
-
-form .btn {
-  padding-bottom: 4em;
-  width: 26em;
-  border: none;
-}
-
-.sm-btn {
-  display: block;
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
-  border-radius: 28px;
-  padding: 0.7em 1.4em 0.7em 1.4em;
-  text-decoration: none;
-  margin: 0 auto;
-  width: 6em;
-  text-align: center;
-}
-
-.btn-orange {
-  background: #DB5757;
-  color: $white;
-}
-
-.btn-orange:hover {
-  background: #e87b6f;
-  color: $white;
-  text-decoration: none;
-}
-
-.btn-grey {
-  background: #515151;
-  color: $white;
-}
-
-.btn-grey:hover {
-  background: #706f6e;
-  color: $white;
-  text-decoration: none;
-}
-
-// Consulting and Research ########################
-#consulting-and-research-header h2 {
-  margin: 0.7em 0 0.2em 0;
-}
-
-#consulting-and-research-header h5 {
-  margin: 0.7em 0 0.2em 0;
-}
-
-.consulting-areas {
-  width: 47%;
-  min-height: 290px;
-}
-
-.consulting-areas p {
-  margin-bottom: 0;
-  margin-right: 1em;
-}
-
-.consulting-areas:first-child, .consulting-areas:nth-child(3) {
-  float: left;
-}
-.consulting-areas:nth-child(2), .consulting-areas:nth-child(4) {
-  float: right;
-}
-
-.consulting-area-logo-div {
-  height: 75px;
-}
-
-// Workshops and Training ########################
-
-#workshop-image-wrapper {
-  background-image: url("../images/workshop-image-sm.png");
-  background-size: 100%;
-  height: 267px;
-  background-repeat: no-repeat;
-}
+// Workshops ########################################
 
 #workshops-and-training {
-  background-image: url("../images/diamonds-sm.png");
-  padding: 0.9em;
-  margin-top: 3em;
+	margin: 0;
+	padding: 0 0 2em;
+		@include n700 {
+/*
+			.row {
+				flex-direction: column;
+			}
+*/
+			.large {
+				display: block;
+				margin: 12px 24px;
+			}
+			#plan-your-project-wrapper {
+				display: flex;
+			}
+		}
+		@include n1000 {
+			.row {
+				flex-direction: column;
+			}
+		}
+		@include w1000 {
+			padding-bottom: 0;
+			.col {
+				flex: 0 0 calc(50% - 9.5%);
+				flex-wrap: wrap;
+				}
+				&:first-child {
+					display: inline-flex;
+				}
+			.row {
+				align-items: center;
+				flex-direction: row-reverse;
+				justify-content: flex-start;
+			}
+			.large {
+				display: inline-block;
+				width: auto;
+			}
+			#workshop-image-wrapper {
+				min-height: 615px;
+			}
+		}
+		@include n1440 {
+			.col {
+				flex: 0 0 calc(50% - 12px);
+				}
+
+		}
+		#workshop-image-wrapper {
+			display: block;
+			height: 376px;
+		}
 }
 
-#workshops-and-training h3 {
-  margin: 0.3em 0 0.5em 0;
+#workshop-image-wrapper {
+	background-image: url(/images/workshop-image.png);
+	background-position: 30% 0%;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-// Clients #######################################
+// Clients ########################################
 
 #clients {
-  padding: 1em 0 0.2em 0;
-  margin-top: 2em;
+	@include w480 {
+		display: block;
+		h2 {
+			text-align: center;
+		}
+	}
+	.col {
+	   flex: 0 0 calc(33.33% - 48px);   /* flex-basis adjustment for margin */
+	   margin: 24px;
+	   @include w480 {
+		   align-items: center;
+		   display: inline-flex;
+		   flex: 0 0 90px;
+		   margin: 36px;
+	   }
+	}
 }
 
-.client-logos {
-  width: 33%;
-  height: 95px;
-  position: relative;
-}
-
-.client-logos img {
-  width: 62%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
 
 // About ########################################
 
 #about {
-  padding-top: 3em;
+	.row {
+		@include w700 {
+			flex-direction: row;
+			flex-wrap: wrap;			
+		}
+		@include n700 {
+			flex-direction: column;
+			flex-wrap: nowrap;
+			img {
+				width: 256px;
+			}
+		}
+	}	
+	.col {
+		@include w700 {
+			flex: 0 0 calc(50% - 48px);
+			margin: 24px;
+			}
+	}
 }
 
-#about h2{
-  margin: 0.5em 0 0.2em 0;
+
+#swb-img-wrapper img {
+	margin-bottom: 2em;
+	width: 50%;
 }
 
-#about h5 {
-  margin: 0 0 1em 0;
+#about-content-wrapper {
+	width: 100%;
 }
-
-#about p {
-  margin: 0 0 1.2em 0;
-}
-
-#about img {
-  margin: 0 0 1em 0;
-  content: url('../images/SWB_sm.png');
-}
-
 
 // Books ########################################
 
 #books {
-  background-image: url("../images/diamonds-sm.png");
-  padding: 0.9em;
-  margin-top: 3em;
+	h3 {
+		margin-bottom: 2em;
+	}
+	@include n1000{
+		padding: 0;
+		.row {
+			justify-content: flex-start;
+			width: 100%;
+		}
+		.col {
+			flex: 0 0 calc(50% - 24px);
+			flex-direction: row;
+			align-content: flex-start;
+			margin: 12px;
+			flex-grow: 1;
+		}
+		img {
+			width: auto;
+		}
+	}		
+	@include w1000{
+		h4, h5, p, .btn {
+			margin: 0;
+		}
+		p { margin-bottom: 2em; }
+		.col {
+			flex: 0 0 calc(50% - 24px);
+			margin: 12px;
+		}
+		.row .row {
+			flex: 0 0 calc(50% - 12px);
+			flex-wrap: nowrap;
+		}
+		img {
+			max-width: 200px;
+		}
+	}
+	@include n700 {
+		img {
+			max-width: 100%;
+		}
+	}
+	@include n480 {
+		.col {
+			flex: 0 0 calc(100% - 12px);
+			margin-bottom: 0;
+			}
+		img {
+			margin-left: 24px;
+			margin-top: 2em;
+			max-width: 50%;
+		}
+	}
+	.row .row:last-child {
+		padding-bottom: 2em;
+	}
+	
 }
 
-#books h3 {
-  margin: 0 0 0.3em  0;
-}
-
-#books h5 {
-  margin-bottom: 0;
-}
-
-.dfrl-book-wrapper img {
-  content: url('../images/design-for-real-life-sm.png');
-  display: block;
-  width: 85%;
-}
-
-.books-wrapper {
-  margin-top: 2em;
-}
-
-.dfrl-wrapper {
-  margin-bottom: 2em;
+.dfrl-book-wrapper {
+	img {  
+		content: url('../images/design-for-real-life-sm.png');
+		}
 }
 
 .ce-book-wrapper img {
   content: url('../images/content-everywhere-sm.png');
-  display: block;
-  width: 85%;
-}
-
-.dfrl-book-wrapper, .ce-book-wrapper {
-  width: 45%;
-  float: left;
-}
-.dfrl-descripion-wrapper, .ce-content-wrapper {
-  width: 55%;
-  float: left;
 }
 
 // Contact ########################################
 
-#contact-form {
-  margin-top: 3em;
-}
 
-#contact-form input {
-  font-size: 1em;
+#contact-form {
+	margin-bottom: 0;
+	div {
+		margin-bottom: 1em;
+		text-align: left;
+		width: 100%;
+	}
+	input {
+		font-size: 1em;
+	}
+	form {
+		margin-bottom: 0;
+	}
 }
 
 #contact-form h2 {
@@ -371,21 +479,22 @@ form .btn {
   padding: 1em;
 }
 
-#name-required-warning, #email-required-warning {
+.warning {
   display: none;
 }
 
 .form-warning {
-  border: 1px solid $orange !important;
+  border: 1px solid $red !important;
   outline: 0;
 }
 
-#form-error{
+#form-error {
   display: none;
 }
 
 .submit-button-wrapper {
-  margin-top: 1em;
+  margin-bottom: 0;
+  margin-top: 2em;
 }
 
 // Thanks ########################################
@@ -397,525 +506,33 @@ form .btn {
   padding: 3em 1em 3em 1em;
 }
 
+
 // Footer ########################################
 
 #footer {
-  background-image: url('../images/grey-diamonds-sm.png');
-  height: 100%;
-  width: 100%;
+	background-color: $black;
+	background-image: url(/images/diamonds-dark.png);
+	margin-bottom: 0;
+	margin-top: 0;
+	padding-top: 2em;
+	a:link, a:visited {
+		color: $white;
+		text-decoration: underline;
+	}
+	a:hover, a:active {
+		text-decoration: none;
+	}
 }
 
-.footer-content {
-  padding: 1em 0em 3em 1em;
+
+// Flexbox ########################################
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-#footer a {
-  color: $white;
-}
-
-#footer a:hover {
-  color: $persian-green;
-}
-
-#footer h5 {
-  padding-top: 1em;
-}
-
-/* Larger than mobile */
-
-@media (min-width: 400px) {
-  // Basic Styles ###############################
-  nav a {
-    font-size: 1.2em;
-  }
-}
-
-/* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {
-  // Landing Section ###############################
-  #landing-section {
-    background-size: 110%;
-    height: 100%;
-  }
-
-  #landing-section h2 {
-    font-size: 1.8em;
-  }
-
-  #landing-section h2:first-child {
-    padding-top: 2em;
-  }
-
-  #landing-section p {
-    margin-bottom: 1em;
-  }
-
-  #landing-description {
-    bottom: 1em;
-  }
-
-  #landing-section-content {
-    height: 25em;
-  }
-
-  // Consulting Areas ###############################
-
-  .consulting-areas {
-    all: unset;
-  }
-
-  .consulting-areas {
-    padding-top: 1.5em;
-  }
-
-  .consulting-areas p{
-    padding-right: 1em;
-  }
-
-  #plan-your-project-wrapper {
-    margin-top: 0.8em;
-  }
-
-  .consulting-areas-wrapper {
-    display: block;
-  }
-
-  .consulting-areas:nth-child(2), .consulting-areas:nth-child(4) {
-    float: left;
-  }
-
-  // Clients ###############################
-
-  .client-logos img {
-    width: 90%;
-  }
-
-  .dfrl-book-wrapper img {
-    content: url('../images/design-for-real-life.png');
-    width: 85%;
-  }
-
-  .ce-book-wrapper img {
-    content: url('../images/content-everywhere.png');
-    width: 85%;
-  }
-
-}
-
-/* Larger than tablet */
-@media (min-width: 750px) {
-  // Basic Styles ###############################
-
-  #main-container {
-    padding: 0 0 0 0;
+img { 
     width: 100%;
-  }
-
-  #logo {
-    width: 232px;
-    height: auto;
-    padding-left: 0;
-    padding-bottom: 0.3em;
-  }
-
-  nav {
-   position: relative;
-  }
-
-  .nav-list-wrapper {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  nav a {
-    font-size: 18px;
-  }
-
-  nav li:first-child, nav li:nth-child(2), nav li:nth-child(3){
-    padding-right: 2em;
-  }
-
-  #work-with-us-nav-btn {
-    display: inline;
-    -webkit-border-radius: 100;
-    -moz-border-radius: 100;
-    border-radius: 100px;
-    background: #DB5757;
-    font-weight: bold;
-    padding: 14px 28px;
-//  margin-top: -0.5em;
-    text-decoration: none;
-  }
-
-  #work-with-us-nav-btn:hover {
-    background: #e87b6f;
-    color: $white;
-    text-decoration: none;
-  }
-
-  // Landing section ###############################
-
-  #landing-section {
-    background-image: url("../images/landing-image.png");
-    height: 31em;
-  }
-
-  #landing-section-content {
-    padding: 0 0 0 2em;
-    height: 26em;
-  }
-
-  #landing-section h2 {
-    font-size: 2.4em;
-  }
-
-  #landing-section h2:first-child {
-    padding-top: 3em;
-  }
-
-  #landing-section p {
-    margin-bottom: 2em;
-  }
-
-  #landing-description {
-    width: 80%;
-  }
-
-  #consulting-and-research-header {
-     width: 90%;
-  }
-
-  // Work with us ###############################
-
-  #work-with-us-btn {
-    margin: 0 0 0 0;
-  }
-
-  .consulting-areas p {
-    margin-bottom: 2.5em;
-  }
-
-  // Workshops #################################
-
-  #workshop-image-wrapper {
-    float: right;
-    background-image: url("../images/workshop-image.png");
-    background-size: cover;
-    min-height: 350px;
-    width: 33%;
-    background-repeat: no-repeat;
-    background-position: right top;
-  }
-
-  #workshops-and-training{
-    background-image: url("../images/diamonds.png");
-    padding: 0;
-  }
-
-  #workshop-description {
-    width: 66%;
-    height: 288px;
-    margin: 0;
-    padding: 0.9em;
-  }
-
-  #workshop-description p {
-    padding: 0 1.5em 1em 0;
-  }
-
-  // Clients #################################
-
-  #clients h2 {
-    margin-top: 0.8em;
-  }
-
-  #clients-header {
-    text-align: center;
-  }
-
-  .client-logos.one.columns {
-    width: 7.5%;
-    height: 100px;
-    margin-bottom: 5%;
-  }
-
-  .client-logos img {
-    width: 100%;
-  }
-
-  // About #################################
-
-  #swb-img-wrapper img {
-    content: url('../images/SWB.png');
-    height: 30px;
-  }
-
-  #swb-img-wrapper{
-    width: 50%;
-  }
-
-  #about-content-wrapper {
-    width: 45%;
-  }
-
-  // Books #################################
-
-  #books {
-    background-image: url("../images/diamonds.png");
-  }
-
-  .dfrl-descripion-wrapper, .ce-content-wrapper{
-    min-height: 260px;
-    position: relative;
-  }
-
-  .dfrl-descripion-wrapper p, .ce-content-wrapper p {
-    margin-bottom: 0;
-  }
-
-  .dfrl-descripion-wrapper .sm-btn, .ce-content-wrapper .sm-btn {
-    position: absolute;
-    bottom: 0;
-  }
-
-  .publisher{
-    padding-bottom: 1.2em;
-  }
-
-  #contact-form h2 {
-    text-align: center;
-  }
-
-  #contact-form .btn {
-    margin: 0 0 0 0;
-    float: left;
-  }
-  .submit-button-wrapper {
-    width: 30%;
-  }
-  .contact-phone {
-    width: 20%;
-    float: left;
-  }
-  #footer {
-    background-image: url('../images/grey-diamonds.png');
-  }
-
 }
-
-@media (min-width: 850px) {
-  // Landing section #################################
-  #landing-section {
-    margin-bottom: 0em;
-  }
-
-  // Consulting Areas #################################
-
-  .consulting-areas-wrapper.six.columns {
-    margin-left: 0px;
-    width: 50%;
-  }
-
-  .consulting-areas-wrapper > .consulting-areas.six.columns {
-    width: 50%;
-  }
-
-  // About #################################
-
-  #about {
-    float: none;
-    margin: 0 auto;
-    width: 82%;
-  }
-
-  #about img {
-    width: 100%;
-  }
-
-  #about-content-wrapper {
-    width: 45%;
-  }
-
-  .books-content-wrapper {
-    padding-top: 2em;
-  }
-
-  .books-wrapper p {
-    line-height: 1.5;
-  }
-
-  .client-logos img {
-    width: 80%;
-  }
-}
-
-/* Larger than desktop */
-@media (min-width: 1000px) {
-  // Basic Styles #################################
-  .site-content {
-    float: none;
-    margin: 0 auto;
-    width: 77%;
-  }
-
-  nav li:first-child, nav li:nth-child(2), nav li:nth-child(3){
-    padding-right: 4em;
-  }
-
-  // Landing Section #################################
-  #landing-section {
-    background-image: url("../images/landing-image.png");
-  }
-
-  #landing-section-content {
-    padding: 0 0 0 2em;
-    height: 30em;
-  }
-
-  #landing-section h2 {
-    font-size: 3em;
-  }
-
-  #landing-section h2:first-child {
-    padding-top: 2em;
-  }
-
-  #landing-section p {
-    margin-bottom: 2.5em;
-  }
-
-  #landing-description {
-    margin-bottom: 2em;
-  }
-
-  // Work with us #################################
-
-  #work-with-us-btn {
-    margin: 0 0 0 0;
-  }
-
-  // About #################################
-
-  #swb-img-wrapper{
-    width: 45%;
-  }
-
-  #about-content-wrapper{
-    width: 50%;
-  }
-
-  // Books #################################
-
-  .dfrl-descripion-wrapper, .ce-content-wrapper{
-    height: 240px;
-    position: relative;
-  }
-
-  #workshops-and-training, #books, #footer {
-    width: 100%;
-  }
-
-  .workshop-wrapper, .books-content-wrapper, #about {
-    width: 78.8%;
-    margin: 0 auto;
-  }
-
-  #contact-form {
-    width: 70%;
-  }
-
-  // Contact form #################################
-  #contact-form {
-    margin: 0 auto;
-  }
-
-  #contact-form form {
-    width: 100%;
-  }
-
-  .footer-content {
-    width: 82%;
-    margin: 0 auto;
-  }
-
-}
-
-/* Larger than Desktop HD */
-@media (min-width: 1200px) {
-  // Landing section #################################
-
-  #headline h2 {
-    font-size: 5em;
-  }
-
-  #landing-section h2:first-child {
-    padding-top: 0.9em;
-  }
-
-   #landing-section {
-    background-image: url("../images/landing-image.png");
-    height: 580px;
-  }
-
-  #landing-section-content {
-    height: 39em;
-  }
-
-  // About #################################
-
-  #about p {
-    line-height: 2;
-  }
-
-  #swb-img-wrapper{
-    width: 37%;
-  }
-
-  #about-content-wrapper{
-    width: 57%;
-  }
-
-  // Clients #################################
-
-  .client-logos img {
-    width: 70%;
-  }
-}
-
-@media (min-width: 1400px) {
-  // Landing section #################################
-   #landing-section {
-    background-image: url("../images/landing-image.png");
-    height: 700px;
-  }
-  #landing-section-content {
-    height: 45em;
-  }
-
-  #headline h2 {
-    font-size: 5.5em;
-  }
-
-  #landing-section h2:first-child {
-    padding-top: 0.9em;
-  }
-  #landing-description p {
-    font-size: 1.5em;
-  }
-
-  // About
-  #swb-img-wrapper{
-    width: 33%;
-  }
-
-  #about-content-wrapper{
-    width: 60%;
-  }
-
-  .client-logos img {
-    width: 60%;
-  }
-}
-
