@@ -276,7 +276,7 @@ nav {
 		@include w1000 {
 			padding-bottom: 0;
 			.col {
-				flex: 0 0 calc(50% - 9.5%);
+				flex: 0 0 calc(50% - 7%);
 				flex-wrap: wrap;
 				}
 				&:first-child {
