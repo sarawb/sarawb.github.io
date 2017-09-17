@@ -251,7 +251,7 @@ form .btn {
 }
 
 #workshops-and-training {
-  background-image: url("../images/diamonds-sm.png");
+  background-image: url("../images/diamonds.png");
   padding: 0.9em;
   margin-top: 3em;
 }
@@ -309,7 +309,7 @@ form .btn {
 // Books ########################################
 
 #books {
-  background-image: url("../images/diamonds-sm.png");
+  background-image: url("../images/diamonds.png");
   padding: 0.9em;
   margin-top: 3em;
 }
@@ -401,7 +401,7 @@ form .btn {
 
 #thanks {
   display: none;
-  background-image: url('../images/diamonds-sm.png');
+  background-image: url('../images/diamonds.png');
   height: 20em;
   padding: 3em 1em 3em 1em;
 }
@@ -409,7 +409,7 @@ form .btn {
 // Footer ########################################
 
 #footer {
-  background-image: url('../images/grey-diamonds-sm.png');
+  background-image: url('../images/grey-diamonds.png');
   height: 100%;
   width: 100%;
 }
@@ -618,7 +618,6 @@ form .btn {
   }
 
   #workshops-and-training{
-    background-image: url("../images/diamonds.png");
     padding: 0;
   }
 
@@ -669,10 +668,6 @@ form .btn {
 
   // Books #################################
 
-  #books {
-    background-image: url("../images/diamonds.png");
-  }
-
   .dfrl-descripion-wrapper, .ce-content-wrapper{
     min-height: 260px;
     position: relative;
@@ -705,9 +700,6 @@ form .btn {
   .contact-phone {
     width: 20%;
     float: left;
-  }
-  #footer {
-    background-image: url('../images/grey-diamonds.png');
   }
 
 }
