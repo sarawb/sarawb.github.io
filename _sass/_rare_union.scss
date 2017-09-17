@@ -1,7 +1,7 @@
 // Fonts ###############################
 * {
   font-family: "ProximaNova-Regular", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  line-height: 1.6;
   letter-spacing: 0.03em;
 }
 $bold: "ProximaNova-Bold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -49,6 +49,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #FCFCFC;
+  font-size: 16px;
 }
 
 #main-container, #landing-section-content {
