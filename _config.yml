@@ -1,11 +1,11 @@
 title: "Rare Union: Content Strategy Consulting and Workshops"
-email: sarawb.com
+email: sara@rareunion.com
 description: > # this means to ignore newlines until "baseurl:"
   Rare Union provides content strategy consulting, training, and workshops on topics like intro to content strategy, content and UX, information architecture, and structured content modeling.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://www.rareunion.com/" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: sara_ann_marie
+github_username: sarawb
 
 # Build settings
 markdown: kramdown
